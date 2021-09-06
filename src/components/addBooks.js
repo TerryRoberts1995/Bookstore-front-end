@@ -32,8 +32,11 @@ export default class AddBook extends React.Component {
                 review: this.state.review,
                 user_id: this.state.user_id
             })
+        })
+        .then(response => {
+            console.log('new book submitted', response);
+            this.props.history.push('/');
         });
-        console.log('new book submitted');
     }
 
     clearMe() {

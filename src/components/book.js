@@ -2,7 +2,7 @@ import React from 'react';
 
 const Book = (props) => {
     const {id, author, title, review} = props.book;
-
+    
     return(
         <div className="book-container" key= {id}>
             <div className='book-information'>
@@ -12,9 +12,10 @@ const Book = (props) => {
                 <div className ="book-field">
                     Author: {author} 
                 </div>
-                    review: {review}
                 <div className ="book-field">
+                    Review: {review}
                 </div>
+                <button onClick={() => props.deleteBook()}className="delete-button">Delete</button>
             </div>
         </div>
     )
