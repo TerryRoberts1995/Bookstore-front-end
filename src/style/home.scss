@@ -1,0 +1,37 @@
+.home-book-container {
+    margin-top: 50px;
+    background-color: #F2E9E4;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+
+    h1 {
+        font-size: 70px;
+        margin-bottom: 25px;
+        text-shadow: 2px 1px 5px #4A4E69;
+    }
+
+    .book-listing {
+        margin: 20px;
+        font-size: 15px;
+        color: white;
+        background-color: #4A4E69;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 2px #9A8C98;
+        .book-container{
+            .book-information {
+                padding: 8px;
+                .book-field {
+                    padding: 5px;
+                    
+                }
+            }
+        }
+    }
+}

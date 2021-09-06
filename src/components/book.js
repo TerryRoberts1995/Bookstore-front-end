@@ -4,8 +4,8 @@ const Book = (props) => {
     const {id, author, title, review} = props.book;
 
     return(
-        <div key= {id}>
-            <div className='book-item'>
+        <div className="book-container" key= {id}>
+            <div className='book-information'>
                 <div className ="book-field">
                     Title: {title}
                 </div>

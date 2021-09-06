@@ -31,8 +31,9 @@ export default class Home extends React.Component {
     render() {
         return (
             <div className='home-book-container'>
+                <h1>Books</h1>
                 {this.state.allBooks.map(book => {
-                    return <div key={book.id}>
+                    return <div className="book-listing" key={book.id}>
                         <Book book={book}/>
                     </div>
                 })}

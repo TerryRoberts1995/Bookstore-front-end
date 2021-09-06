@@ -8,11 +8,12 @@ export default class AddBook extends React.Component {
             title: '',
             author: '',
             review: '',
-            user_id: 1
+            user_id: 1,
         }
 
         this.addNewBook = this.addNewBook.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.clearMe = this.clearMe.bind(this);
     }
 
     addNewBook(e) {
@@ -32,8 +33,15 @@ export default class AddBook extends React.Component {
                 user_id: this.state.user_id
             })
         });
-
         console.log('new book submitted');
+    }
+
+    clearMe() {
+        this.setState({
+            title: '',
+            author: '',
+            review: ''
+        })
     }
 
     handleChange(event) {
@@ -45,11 +53,18 @@ export default class AddBook extends React.Component {
     render() {
     return (
         <form className='add-book-form' onSubmit={this.addNewBook}>
-            <input type='text' placeholder='title' name='title' onChange={this.handleChange}/>
-            <input type='text' placeholder='Author' name='author' onChange={this.handleChange}/>
-            <input type='text' placeholder='review' name='review' onChange={this.handleChange}/>
 
-            <button type='submit'>Submit</button>
+            <div className="input-container">
+                <div className="inputs">
+                    <input type='text' placeholder='Title' name='title' onChange={this.handleChange}/>
+                    <input type='text' placeholder='Author' name='author' onChange={this.handleChange}/>
+                    <input type='text' placeholder='Review' name='review' onChange={this.handleChange}/>
+                </div>
+
+                <div className="add-button">
+                    <button type='submit'>Submit</button>
+                </div>
+            </div>
         </form>
     )
     }

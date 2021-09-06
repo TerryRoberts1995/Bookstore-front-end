@@ -1,0 +1,33 @@
+.nav-container {
+    background-color: #9A8C98 ;
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    box-shadow: 1px 2px 8px 2px black;
+    z-index: 2;
+    border-radius: 2px;
+
+    .nav-links-container {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100vw;;
+        .nav-link {
+            .nav-btns a{
+                text-decoration: transparent;
+                text-shadow: 2px 1px 5px #4A4E69; 
+                color: white;
+                font-size: 20px;
+                font-weight: 100;
+
+                &:hover {
+                    text-decoration: underline;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+}
