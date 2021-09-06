@@ -36,6 +36,9 @@ export default class AddBook extends React.Component {
         .then(response => {
             console.log('new book submitted', response);
             this.props.history.push('/');
+        })
+        .catch(error => {
+            console.log("This is the issue: ", error);
         });
     }
 

@@ -37,12 +37,13 @@ export default class Home extends React.Component {
         .then(res => {
             this.setState({
                 allBooks: this.state.allBooks.filter(book => {
-                    return book.id !== id
+                    return book.id !== id;
                 })
             })
-
             console.log(this.state.allBooks)
-        }).catch(err => err);
+        }).catch(err => {
+            return err;
+        });
     }
 
     editBook() {
